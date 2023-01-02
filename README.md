@@ -111,15 +111,19 @@
 
 พิมพ์คำสั่ง cd /tmp/nagios-plugins-release-2.2.1/
 
+
 พิมพ์คำสั่ง ./tools/setup
+
 ![1a5deaa3-6417-4108-b381-8ff0bade8719](https://user-images.githubusercontent.com/119097663/210223849-1486481c-0846-4eb5-8187-fd4303ef3a30.jpg)
 
 พิมพ์คำสั่ง sudo ./configure
+
 ![cb3b6676-8f1c-490e-bbed-030e727a3206](https://user-images.githubusercontent.com/119097663/210224025-93bd57d8-c97d-46f9-8b6e-7ae91faf2b22.jpg)
 
 พิมพ์คำสั่ง sudo make
 
 พิมพ์คำสั่ง sudo make instal
+
 ![38ee74da-768f-4b77-9ce4-3e091e75d471](https://user-images.githubusercontent.com/119097663/210224058-f7dc376f-aea5-4457-ad78-e3ad9c8caf36.jpg)
 
 เสร็จสิ้นขั้นตอนการติดตั้งปลั๊กอินของ Nagios
