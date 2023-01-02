@@ -50,14 +50,15 @@
 5. ติดตั้งแพ็คเกจที่จำเป็นต่างๆ
 
 พิมพ์คำสั่ง sudo make install
+
 ![9d3a9747-7823-48a5-a2c7-d4e768040e18](https://user-images.githubusercontent.com/119097663/210222147-afee7c2c-1d56-4cc5-8735-a81d37e71c89.jpg)
+
 
 พิมพ์คำสั่ง sudo make install-daemoninit 
 
 พิมพ์คำสั่ง sudo make install-commandmode 
 
 พิมพ์คำสั่ง sudo make install-config
-
 
 ![f2000ebb-e9aa-48d9-b7df-4eea2aa5ba86](https://user-images.githubusercontent.com/119097663/210222213-504c2455-8da8-4d18-ad2a-48220df104c0.jpg)
 
