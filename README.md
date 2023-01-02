@@ -33,6 +33,7 @@
 
 พิมพ์คำสั่ง cd /tmp/nagioscore-nagios-4.4.6/
 
+
 พิมพ์คำสั่ง sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 ![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221735-5208a6fb-5479-42ed-a7ce-a97ce38f116b.jpg)
 
@@ -54,6 +55,7 @@
 พิมพ์คำสั่ง sudo make install-commandmode 
 
 พิมพ์คำสั่ง sudo make install-config
+
 ![f2000ebb-e9aa-48d9-b7df-4eea2aa5ba86](https://user-images.githubusercontent.com/119097663/210222213-504c2455-8da8-4d18-ad2a-48220df104c0.jpg)
 
 6. ติดตั้งและกำหนดค่าไฟร์วอลล์ผ่าน IPTables
