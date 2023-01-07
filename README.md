@@ -132,11 +132,13 @@
 เสร็จสิ้นขั้นตอนการติดตั้งปลั๊กอินของ Nagios
 
 
-##การอ่านผลของเครื่องมือ
-![สกรีนช็อต_25660107_142419](https://user-images.githubusercontent.com/119097660/211141883-355bc75f-1721-4404-b695-9d2d9a0f2eb7.png)
+## การอ่านผลของเครื่องมือ
+หน้า Tactical Overview จะแสดงTactical Status Overview เช่น Network Outages,Monitoring Performance,Network Health,Monitoring Features เป็นต้น
+
 
 สามารถดูภาพรวมของHost StatusและService Status ผ่านหน้า Services
 
+![สกรีนช็อต_25660107_142419](https://user-images.githubusercontent.com/119097660/211141883-355bc75f-1721-4404-b695-9d2d9a0f2eb7.png)
 ![สกรีนช็อต_25660107_150510](https://user-images.githubusercontent.com/119097660/211141861-dfadbd2c-ba24-4be3-ad46-f2bffb1b811c.png)
 
 โดยผลของHost Status จะมีอยู่ 4 ค่า
@@ -166,8 +168,13 @@
     - Critical จะมีค่าเท่า Unreachable บอกว่า Service นั้้นไม่สามารถเข้าได้
   - Pending
     - Pending จะเป็นค่าที่บอกว่า Service กำลังรอตรวจสอบ
+    
+Host GroupsและService Groups จะเป็นการแบ่งแยกกลุ่มเผื่อให้ดูได้ง่าย
 
+หน้า Map จะเป็นหน้าที่แสดงแผนภาพ Host
 
+หน้า Alerts จะแสดงประวัติแจ้งเตือนโฮสต์และบริการทั้งหมด
 
+หน้า จะแสดงการแจ้งเตือนผู้ติดต่อทั้งหมด
 
     
