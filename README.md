@@ -171,15 +171,15 @@
     - Pending จะเป็นค่าที่บอกว่า Service กำลังรอตรวจสอบ
     
 Host GroupsและService Groups จะเป็นการแบ่งแยกกลุ่มเผื่อให้ดูได้ง่าย
-
 ![สกรีนช็อต_25660107_211843](https://user-images.githubusercontent.com/119097660/211155766-b8c29cd5-11aa-4422-88df-e162cf19e5aa.png)
 
 หน้า Map จะเป็นหน้าที่แสดงแผนภาพ Host
+![สกรีนช็อต_25660107_211824](https://user-images.githubusercontent.com/119097660/211155947-4603b8e7-465c-42e9-bee3-21e3683e95b4.png)
 
 หน้า Alerts จะแสดงประวัติแจ้งเตือนโฮสต์และบริการทั้งหมด
 ![สกรีนช็อต_25660107_211859](https://user-images.githubusercontent.com/119097660/211155815-fe2c1aef-ba1b-4af1-a7a5-0917c71ba94d.png)
 
 หน้า จะแสดงการแจ้งเตือนผู้ติดต่อทั้งหมด
-
+![สกรีนช็อต_25660107_143253](https://user-images.githubusercontent.com/119097660/211155959-b88e2f3c-dabc-4545-8cb3-bbe7f32d491c.png)
   
 
