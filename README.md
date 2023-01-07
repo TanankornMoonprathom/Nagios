@@ -14,8 +14,16 @@
 
 เราสามารถติดตั้ง Nagios ได้หลายระบบปฎิบัติการ ทางกลุ่มเลือก ubuntu วิธีการติดตั้งมีขั้นตอนดังนี้
 1. ขั้นตอนในการเตรียมระบบปฏิบัติการ อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน Nagios Core.
-โดยพิมพ์คำสั่ง sudo apt update  
-พิมพ์คำสั่ง sudo apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev
+
+
+พิมพ์คำสั่ง 
+``` 
+sudo apt update 
+``` 
+พิมพ์คำสั่ง 
+```
+sudo apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev
+```
 ![1](https://user-images.githubusercontent.com/119097663/210220857-ef1be291-7e7e-419e-a1e7-526d567d8ea2.jpg)
 ![imgpsh_mobile_save](https://user-images.githubusercontent.com/119097663/210221017-95b6c702-ddd0-417a-b5d9-e204d0221c97.jpg)
 
