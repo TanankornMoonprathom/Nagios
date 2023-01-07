@@ -13,6 +13,7 @@
 10. เว็บอินเตอร์เฟสเสริมเพื่อดูสถานะปัจจุบันของเครือข่าย ประวัติการแจ้งเตือนและปัญหา ไฟล์บันทึก และอื่นๆ
 
 ## เราสามารถติดตั้ง Nagios ได้หลายระบบปฎิบัติการ ทางกลุ่มเลือก ubuntu วิธีการติดตั้งมีขั้นตอนดังนี้
+
 1. ขั้นตอนในการเตรียมระบบปฏิบัติการ อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน Nagios Core.
 โดยพิมพ์คำสั่ง 
 
@@ -31,13 +32,13 @@
 
 พิมพ์คำสั่ง
       
-   wget -O nagioscore.tar.gz
+       wget -O nagioscore.tar.gz
 
 ![091ef26d-f0c5-4197-a597-763a82883125](https://user-images.githubusercontent.com/119097663/210221472-e97ee7c2-74a6-42f8-bac8-45c634d7ceb6.jpg)
 
 พิมพ์คำสั่ง 
 
-      tar xzf nagioscore.tar.gz
+       tar xzf nagioscore.tar.gz
 
  ![image](https://user-images.githubusercontent.com/119097663/210221636-6e1e4d42-5365-46cb-957a-28f0cf501c7b.png)
 
@@ -58,6 +59,7 @@
 4. สร้างผู้ใช้และกลุ่ม โดยพิมพ์คำสั่ง 
 
        sudo make install-groups-users และ sudo usermod -a -G nagios www-data
+       
 ![68bbe1c5-a53e-4feb-9f03-351e64069f59](https://user-images.githubusercontent.com/119097663/210222021-db50df4a-8c2e-4b8b-b511-d552e80ee109.jpg)
 
 5. ติดตั้งแพ็คเกจที่จำเป็นต่างๆ โดยพิมพ์คำสั่ง 
@@ -91,17 +93,15 @@
        
        sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
-8.  รีสตาร์ท / เริ่มบริการที่จำเป็น โดยพิมพ์คำสั่ง 
+8.  รีสตาร์ท / เริ่มบริการที่จำเป็น โดยพิมพ์คำสั่ง
        
-       systemctl restart apache2.service
+        systemctl restart apache2.service
 
-       systemctl start nagios.service
+        systemctl start nagios.service
        
 ![4f2623bb-1c66-4ec4-9024-baeada159610](https://user-images.githubusercontent.com/119097663/210223008-4757a317-96a5-43a4-9812-6f37dda0d1cd.jpg)
 
-9. เข้าสู่ระบบ Nagios Core 
-       ด้วย IP 172.31.0.214
-       ล็อคอินด้วย Username เเละ Password
+9. เข้าสู่ระบบ Nagios Core ด้วย IP 172.31.0.214 ล็อคอินด้วย Username เเละ Password
        
 ![eb1bf9da-7dcd-41d3-9307-8fa9172bb998](https://user-images.githubusercontent.com/119097663/210223237-3db6680f-3441-42af-828b-7407bec69bf6.jpg)
 
@@ -109,40 +109,51 @@
 
 ## การติดตั้งปลั๊กอินของ Nagios มีขั้นตอนการติดตั้งดังนี้
 
-1. อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน ปลั๊กอิน Nagios.
+1. อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน ปลั๊กอิน Nagios. โดยพิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง sudo apt update
+       sudo apt update
 
-พิมพ์คำสั่ง sudo apt install autoconf gcc libc6 libmcrypt-dev make libssl-dev wget bc gawk dc build-essential snmp libnet-snmp-perl gettext
+       sudo apt install autoconf gcc libc6 libmcrypt-dev make libssl-dev wget bc gawk dc build-essential snmp libnet-snmp-perl gettext
+       
 ![6db2ec87-0646-4ffe-b703-6365e82d644a](https://user-images.githubusercontent.com/119097663/210223568-8b12aa0b-ccc9-4075-ae74-ea2745ac9492.jpg)
 
-2. ดาวน์โหลดและเปิดเครื่องรูดแพ็คเกจปัจจุบันด้วย "ปลั๊กอิน Nagios"
+2. ดาวน์โหลดและเปิดเครื่องรูดแพ็คเกจปัจจุบันด้วย "ปลั๊กอิน Nagios" โดยพิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง cd /tmp
+       cd /tmp
 
-พิมพ์คำสั่ง wget --no-check-certificate -O nagios-plugins.tar.gz
+       wget --no-check-certificate -O nagios-plugins.tar.gz
+       
 ![31541dce-9617-491f-9664-91719c3f5554](https://user-images.githubusercontent.com/119097663/210223717-c6c1689e-bc28-47b6-97b2-a2d98d9db4be.jpg)
 
-พิมพ์คำสั่ง tar zxf nagios-plugins.tar.gz
+พิมพ์คำสั่ง 
+
+       tar zxf nagios-plugins.tar.gz
+       
 ![1a5deaa3-6417-4108-b381-8ff0bade8719](https://user-images.githubusercontent.com/119097663/210223849-1486481c-0846-4eb5-8187-fd4303ef3a30.jpg)
 
-3. รวบรวมและติดตั้ง "ปลั๊กอิน Nagios"
+3. รวบรวมและติดตั้ง "ปลั๊กอิน Nagios" โดยพิมพ์คำสั่ง 
+       
+       cd /tmp/nagios-plugins-release-2.2.1/
 
-พิมพ์คำสั่ง cd /tmp/nagios-plugins-release-2.2.1/
-
-
-พิมพ์คำสั่ง ./tools/setup
+       ./tools/setup
 
 ![1a5deaa3-6417-4108-b381-8ff0bade8719](https://user-images.githubusercontent.com/119097663/210223849-1486481c-0846-4eb5-8187-fd4303ef3a30.jpg)
 
-พิมพ์คำสั่ง sudo ./configure
+พิมพ์คำสั่ง 
+
+       sudo ./configure
 
 ![cb3b6676-8f1c-490e-bbed-030e727a3206](https://user-images.githubusercontent.com/119097663/210224025-93bd57d8-c97d-46f9-8b6e-7ae91faf2b22.jpg)
 
-พิมพ์คำสั่ง sudo make
+พิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง sudo make instal
+       sudo make
+
+       sudo make instal
+       
 
 ![38ee74da-768f-4b77-9ce4-3e091e75d471](https://user-images.githubusercontent.com/119097663/210224058-f7dc376f-aea5-4457-ad78-e3ad9c8caf36.jpg)
 
 เสร็จสิ้นขั้นตอนการติดตั้งปลั๊กอินของ Nagios
+
+
