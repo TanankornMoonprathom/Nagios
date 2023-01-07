@@ -135,6 +135,7 @@
 ## การอ่านผลของเครื่องมือ
 หน้า Tactical Overview จะแสดงTactical Status Overview เช่น Network Outages,Monitoring Performance,Network Health,Monitoring Features เป็นต้น
 
+![สกรีนช็อต_25660107_150059](https://user-images.githubusercontent.com/119097660/211155750-3f5c972b-3e93-403f-8c96-646dbb87208c.png)
 
 สามารถดูภาพรวมของHost StatusและService Status ผ่านหน้า Services
 
@@ -171,10 +172,14 @@
     
 Host GroupsและService Groups จะเป็นการแบ่งแยกกลุ่มเผื่อให้ดูได้ง่าย
 
+![สกรีนช็อต_25660107_211843](https://user-images.githubusercontent.com/119097660/211155766-b8c29cd5-11aa-4422-88df-e162cf19e5aa.png)
+
 หน้า Map จะเป็นหน้าที่แสดงแผนภาพ Host
 
 หน้า Alerts จะแสดงประวัติแจ้งเตือนโฮสต์และบริการทั้งหมด
+![สกรีนช็อต_25660107_211859](https://user-images.githubusercontent.com/119097660/211155815-fe2c1aef-ba1b-4af1-a7a5-0917c71ba94d.png)
 
 หน้า จะแสดงการแจ้งเตือนผู้ติดต่อทั้งหมด
 
-    
+  
+
