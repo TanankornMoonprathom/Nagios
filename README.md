@@ -22,15 +22,15 @@
 2. ดาวน์โหลดซอฟต์แวร์ปัจจุบัน
 โดยพิมพ์คำสั่ง cd /tmp
 
-![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221295-aa9de632-3097-4d60-a6d5-c516068d12b1.jpg)
+ ![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221295-aa9de632-3097-4d60-a6d5-c516068d12b1.jpg)
 
 พิมพ์คำสั่ง wget -O nagioscore.tar.gz
 
-![091ef26d-f0c5-4197-a597-763a82883125](https://user-images.githubusercontent.com/119097663/210221472-e97ee7c2-74a6-42f8-bac8-45c634d7ceb6.jpg)
+ ![091ef26d-f0c5-4197-a597-763a82883125](https://user-images.githubusercontent.com/119097663/210221472-e97ee7c2-74a6-42f8-bac8-45c634d7ceb6.jpg)
 
 พิมพ์คำสั่ง tar xzf nagioscore.tar.gz
 
-![image](https://user-images.githubusercontent.com/119097663/210221636-6e1e4d42-5365-46cb-957a-28f0cf501c7b.png)
+ ![image](https://user-images.githubusercontent.com/119097663/210221636-6e1e4d42-5365-46cb-957a-28f0cf501c7b.png)
 
 3. รวบรวมซอฟต์แวร์ปัจจุบัน
 
