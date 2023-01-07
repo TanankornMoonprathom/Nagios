@@ -12,86 +12,102 @@
 9. รองรับการนำโฮสต์การตรวจสอบที่ซ้ำซ้อนไปใช้
 10. เว็บอินเตอร์เฟสเสริมเพื่อดูสถานะปัจจุบันของเครือข่าย ประวัติการแจ้งเตือนและปัญหา ไฟล์บันทึก และอื่นๆ
 
-เราสามารถติดตั้ง Nagios ได้หลายระบบปฎิบัติการ ทางกลุ่มเลือก ubuntu วิธีการติดตั้งมีขั้นตอนดังนี้
+## เราสามารถติดตั้ง Nagios ได้หลายระบบปฎิบัติการ ทางกลุ่มเลือก ubuntu วิธีการติดตั้งมีขั้นตอนดังนี้
 1. ขั้นตอนในการเตรียมระบบปฏิบัติการ อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน Nagios Core.
-โดยพิมพ์คำสั่ง sudo apt update  
-พิมพ์คำสั่ง sudo apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev
+โดยพิมพ์คำสั่ง 
+
+       sudo apt update 
+
+       sudo apt install autoconf gcc libc6 make wget unzip apache2 apache2-utils php libgd-dev
+       
 ![1](https://user-images.githubusercontent.com/119097663/210220857-ef1be291-7e7e-419e-a1e7-526d567d8ea2.jpg)
 ![imgpsh_mobile_save](https://user-images.githubusercontent.com/119097663/210221017-95b6c702-ddd0-417a-b5d9-e204d0221c97.jpg)
 
-2. ดาวน์โหลดซอฟต์แวร์ปัจจุบัน
-โดยพิมพ์คำสั่ง cd /tmp
+2. ดาวน์โหลดซอฟต์แวร์ปัจจุบัน โดยพิมพ์คำสั่ง
+        
+       cd /tmp
 
- ![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221295-aa9de632-3097-4d60-a6d5-c516068d12b1.jpg)
+![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221295-aa9de632-3097-4d60-a6d5-c516068d12b1.jpg)
 
-พิมพ์คำสั่ง wget -O nagioscore.tar.gz
+พิมพ์คำสั่ง
+      
+   wget -O nagioscore.tar.gz
 
- ![091ef26d-f0c5-4197-a597-763a82883125](https://user-images.githubusercontent.com/119097663/210221472-e97ee7c2-74a6-42f8-bac8-45c634d7ceb6.jpg)
+![091ef26d-f0c5-4197-a597-763a82883125](https://user-images.githubusercontent.com/119097663/210221472-e97ee7c2-74a6-42f8-bac8-45c634d7ceb6.jpg)
 
-พิมพ์คำสั่ง tar xzf nagioscore.tar.gz
+พิมพ์คำสั่ง 
+
+      tar xzf nagioscore.tar.gz
 
  ![image](https://user-images.githubusercontent.com/119097663/210221636-6e1e4d42-5365-46cb-957a-28f0cf501c7b.png)
 
-3. รวบรวมซอฟต์แวร์ปัจจุบัน
+3. รวบรวมซอฟต์แวร์ปัจจุบัน โดยพิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง cd /tmp/nagioscore-nagios-4.4.6/
-
-
-พิมพ์คำสั่ง sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
+       cd /tmp/nagioscore-nagios-4.4.6/
+       
+       sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 
 ![fcc117c0-d4e9-4f1b-bdb9-15968e39f2a9](https://user-images.githubusercontent.com/119097663/210221735-5208a6fb-5479-42ed-a7ce-a97ce38f116b.jpg)
 
-พิมพ์คำสั่ง sudo make all
+พิมพ์คำสั่ง 
+
+       sudo make all
 
 ![265284c8-f718-4161-9524-5ab4df068867](https://user-images.githubusercontent.com/119097663/210221893-5267cec2-5712-49e1-b401-f5f6de1a4f36.jpg)
 
-4. สร้างผู้ใช้และกลุ่ม
+4. สร้างผู้ใช้และกลุ่ม โดยพิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง sudo make install-groups-users และ sudo usermod -a -G nagios www-data
+       sudo make install-groups-users และ sudo usermod -a -G nagios www-data
 ![68bbe1c5-a53e-4feb-9f03-351e64069f59](https://user-images.githubusercontent.com/119097663/210222021-db50df4a-8c2e-4b8b-b511-d552e80ee109.jpg)
 
-5. ติดตั้งแพ็คเกจที่จำเป็นต่างๆ
+5. ติดตั้งแพ็คเกจที่จำเป็นต่างๆ โดยพิมพ์คำสั่ง 
 
-พิมพ์คำสั่ง sudo make install
+       sudo make install
 
 ![9d3a9747-7823-48a5-a2c7-d4e768040e18](https://user-images.githubusercontent.com/119097663/210222147-afee7c2c-1d56-4cc5-8735-a81d37e71c89.jpg)
 
 
-พิมพ์คำสั่ง sudo make install-daemoninit 
+พิมพ์คำสั่ง 
+       
+       sudo make install-daemoninit 
 
-พิมพ์คำสั่ง sudo make install-commandmode 
+       sudo make install-commandmode 
 
-พิมพ์คำสั่ง sudo make install-config
+       sudo make install-config
 
 ![f2000ebb-e9aa-48d9-b7df-4eea2aa5ba86](https://user-images.githubusercontent.com/119097663/210222213-504c2455-8da8-4d18-ad2a-48220df104c0.jpg)
 
-6. ติดตั้งและกำหนดค่าไฟร์วอลล์ผ่าน IPTables
+6. ติดตั้งและกำหนดค่าไฟร์วอลล์ผ่าน IPTables โดยพิมพ์คำสั่ง 
+       
+       sudo apt install iptables
 
-พิมพ์คำสั่ง sudo apt install iptables
+       sudo iptables -I INPUT -p tcp --destination-port 80 -j ACCEPT
 
-พิมพ์คำสั่ง sudo iptables -I INPUT -p tcp --destination-port 80 -j ACCEPT
-
-พิมพ์คำสั่ง sudo apt install -y iptables-persistent
+       sudo apt install -y iptables-persistent
+       
 ![38daeabe-ec4b-4625-ba05-188ce02252b8](https://user-images.githubusercontent.com/119097663/210222466-3a45a764-524a-43cd-91e5-19258f813066.jpg)
 
-7. สร้างบัญชีผู้ใช้ใน Apache เพื่อเริ่มต้นใน Nagios Core
+7. สร้างบัญชีผู้ใช้ใน Apache เพื่อเริ่มต้นใน Nagios Core โดยพิมพ์คำสั่ง 
+       
+       sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
-พิมพ์คำสั่ง sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+8.  รีสตาร์ท / เริ่มบริการที่จำเป็น โดยพิมพ์คำสั่ง 
+       
+       systemctl restart apache2.service
 
-8.  รีสตาร์ท / เริ่มบริการที่จำเป็น
-
-พิมพ์คำสั่ง systemctl restart apache2.service
-
-พิมพ์คำสั่ง systemctl start nagios.service
+       systemctl start nagios.service
+       
 ![4f2623bb-1c66-4ec4-9024-baeada159610](https://user-images.githubusercontent.com/119097663/210223008-4757a317-96a5-43a4-9812-6f37dda0d1cd.jpg)
 
 9. เข้าสู่ระบบ Nagios Core 
-ด้วย IP 172.31.0.214
-ล็อคอินด้วย Username เเละ Password
+       ด้วย IP 172.31.0.214
+       ล็อคอินด้วย Username เเละ Password
+       
 ![eb1bf9da-7dcd-41d3-9307-8fa9172bb998](https://user-images.githubusercontent.com/119097663/210223237-3db6680f-3441-42af-828b-7407bec69bf6.jpg)
 
 เป็นอันเสร็จขั้นตอนการติดตั้ง ขั้นตอนต่อไปจะเป็นการติดตั้งปลั๊กอินหลักของ Nagios
-การติดตั้งปลั๊กอินของ Nagios มีขั้นตอนการติดตั้งดังนี้
+
+## การติดตั้งปลั๊กอินของ Nagios มีขั้นตอนการติดตั้งดังนี้
 
 1. อัพเดต Repositories และติดตั้งแพ็คเกจที่จำเป็นและจำเป็นเพื่อใช้งาน ปลั๊กอิน Nagios.
 
