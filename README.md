@@ -130,3 +130,30 @@
 ![38ee74da-768f-4b77-9ce4-3e091e75d471](https://user-images.githubusercontent.com/119097663/210224058-f7dc376f-aea5-4457-ad78-e3ad9c8caf36.jpg)
 
 เสร็จสิ้นขั้นตอนการติดตั้งปลั๊กอินของ Nagios
+
+
+การอ่านผลของเครื่องมือ
+สามารถดูภาพรวมของHost StatusและService Status ผ่านหน้า Services 
+โดยผลของHost Status จะมีอยู่ 4 ค่า
+  - Up
+    - Up จะเป็นค่าที่บอกว่า Hostของเรานั้นตรวจสอบสำเร็จและกำลังทำงานอยู่
+  - Down
+    - Down จะเป็นค่าที่บอกว่า Hostของเรานั้นไม่ทำงาน
+  - Unreachable	
+    - Unreachable จะเป็นค่าที่บอกว่า Hostของเรานั้นไม่สามารถเข้าได้
+  - Pending
+    - Pending จะเป็นค่าที่บอกว่า Host กำลังรอตรวจสอบ
+ผลของService Status จะมีอยู่ 5 ค่า
+  - Ok
+    - Ok จะเป็นค่าที่บอกว่า Service กำลังทำงานอยู่
+  - Warning
+    - Warning จะมีค่าเท่า Down ซึ่งบอกว่า Service นั้้น Down อยู่
+  - Unknown	
+    - Unknown จะเป็นค่าที่บอกว่า config ค่าผิด ให้ทำการconfigใหม่ 
+  - Critical
+    - Critical จะมีค่าเท่า Unreachable งบอกว่า Service นั้้นไม่สามารถเข้าได้
+  - Pending
+    - Pending จะเป็นค่าที่บอกว่า Service กำลังรอตรวจสอบ
+
+
+    
