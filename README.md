@@ -133,8 +133,16 @@
 
 
 การอ่านผลของเครื่องมือ
-สามารถดูภาพรวมของHost StatusและService Status ผ่านหน้า Services 
+![สกรีนช็อต_25660107_142419](https://user-images.githubusercontent.com/119097660/211141883-355bc75f-1721-4404-b695-9d2d9a0f2eb7.png)
+
+สามารถดูภาพรวมของHost StatusและService Status ผ่านหน้า Services
+
+![สกรีนช็อต_25660107_150510](https://user-images.githubusercontent.com/119097660/211141861-dfadbd2c-ba24-4be3-ad46-f2bffb1b811c.png)
+
 โดยผลของHost Status จะมีอยู่ 4 ค่า
+
+![สกรีนช็อต_25660107_154000](https://user-images.githubusercontent.com/119097660/211141904-c2970cbd-17bf-411a-8bb1-824fccf87fe1.png)
+  
   - Up
     - Up จะเป็นค่าที่บอกว่า Hostของเรานั้นตรวจสอบสำเร็จและกำลังทำงานอยู่
   - Down
@@ -143,7 +151,11 @@
     - Unreachable จะเป็นค่าที่บอกว่า Hostของเรานั้นไม่สามารถเข้าได้
   - Pending
     - Pending จะเป็นค่าที่บอกว่า Host กำลังรอตรวจสอบ
+    
 ผลของService Status จะมีอยู่ 5 ค่า
+
+![สกรีนช็อต_25660107_154006](https://user-images.githubusercontent.com/119097660/211141905-df434023-830b-4212-a6db-7f0558770281.png)
+  
   - Ok
     - Ok จะเป็นค่าที่บอกว่า Service กำลังทำงานอยู่
   - Warning
@@ -151,9 +163,11 @@
   - Unknown	
     - Unknown จะเป็นค่าที่บอกว่า config ค่าผิด ให้ทำการconfigใหม่ 
   - Critical
-    - Critical จะมีค่าเท่า Unreachable งบอกว่า Service นั้้นไม่สามารถเข้าได้
+    - Critical จะมีค่าเท่า Unreachable บอกว่า Service นั้้นไม่สามารถเข้าได้
   - Pending
     - Pending จะเป็นค่าที่บอกว่า Service กำลังรอตรวจสอบ
+
+
 
 
     
